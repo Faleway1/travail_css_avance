@@ -1,0 +1,157 @@
+@font-face {
+    font-family: skel;
+    src: url("../font/tt0205m_.ttf");
+}
+
+section {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100vw;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#WarframeLogo {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+}
+
+#intro #background-video {
+    clip-path: polygon(100% 0, 100% 92%, 0 100%, 0 8%);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#page2,
+#ennemiesFactions {
+    background-image: linear-gradient(#fad668, #e3c35f, #cdaf55, #b69c4c, #9f8842, #887539);
+}
+
+#ennemiesFactions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#ennemiesFactions .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#ennemiesFactions .image {
+    position: relative;
+    margin: 0 20px;
+    max-width: 100%;
+}
+
+.image:nth-child(1) {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.image:nth-child(2) {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.image:nth-child(3) {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: 0.75s;
+}
+
+.image:hover::before {
+    height: 0;
+}
+
+.image:nth-child(1)::before {
+    background-image: url("../assets/FactionsGrineer.webp");
+}
+
+.image:nth-child(2)::before {
+    background-image: url("../assets/FactionsCorpus.webp");
+}
+
+.image:nth-child(3)::before {
+    background-image: url("../assets/infested factions.png");
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+footer p span {
+    margin: 20px;
+}
+
+h2 {
+    font-family: "skel";
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textP2 {
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    max-width: 80%;
+}
+
+.textP2 p {
+    font-size: 16px;
+    line-height: 1.5;
+}
